@@ -7,10 +7,15 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
+#include <errno.h>
+#include <fcntl.h>
 
-#define MAX_INPUT_SIZE 1024
+/* reads input */
+char *read_input(void);
+void freearray2D(char **arr);
+char *duplicate_string(const char *str);
+char **tokenizer(char *line);
 
-void run_shell();
 
 #endif
-
